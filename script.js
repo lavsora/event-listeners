@@ -13,19 +13,11 @@ const visionEBtn = function() {
     e_btn.style.display = 'none';
 };
 
-const cirleMoreLess = function() {
+inputRange.addEventListener('input', function() {
     cirle.style.height = `${inputRange.value}%`;
     cirle.style.width = `${inputRange.value}%`;
-};
 
-const spanValue = function() {
     document.querySelector('#range-span').textContent = `${inputRange.value}%`
-};
-
-inputRange.addEventListener('input', cirleMoreLess);
-inputRange.addEventListener('change', cirleMoreLess);
-
-inputRange.addEventListener('input', spanValue);
-inputRange.addEventListener('change', spanValue);
+});
 
 visionEBtn();
