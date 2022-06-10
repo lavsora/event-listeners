@@ -1,3 +1,5 @@
+'use strict'
+
 const btn = document.querySelector('#btn');
 const inputRange = document.querySelector('#range');
 const inputText = document.querySelector('#text');
