@@ -18,9 +18,6 @@ const changeValue = function () {
 
     cirle.style.height = spanRange.textContent;
     cirle.style.width = spanRange.textContent;
-
-    cirle.style.height = `${inputRange.value}%`;
-    cirle.style.width = `${inputRange.value}%`;
 };
 
 visionEBtn();
