@@ -6,31 +6,28 @@ const inputText = document.querySelector('#text');
 const square = document.querySelector('#square');
 const cirle = document.querySelector('#circle');
 const e_btn = document.querySelector('#e_btn');
+const spanRange = document.querySelector('#range-span');
 
-const visionEBtn = function() {
+const visionEBtn = function () {
     e_btn.style.display = 'none';
 };
 
-const visionInputRange = function() {
-    document.querySelector('#range-span').textContent = '50%';
-}
+const changeValue = function () {
+    spanRange.textContent = '50%';
+    spanRange.textContent = `${inputRange.value}%`;
 
-const visionCircle = function() {
-    cirle.style.height = '50%';
-    cirle.style.width = '50%';
-}
+    cirle.style.height = spanRange.textContent;
+    cirle.style.width = spanRange.textContent;
+
+    cirle.style.height = `${inputRange.value}%`;
+    cirle.style.width = `${inputRange.value}%`;
+};
 
 visionEBtn();
-visionInputRange();
-visionCircle();
+changeValue();
 
-btn.addEventListener('click', function() {
+btn.addEventListener('click', function () {
     square.style.backgroundColor = `${inputText.value}`;
 });
 
-inputRange.addEventListener('input', function() {
-    cirle.style.height = `${inputRange.value}%`;
-    cirle.style.width = `${inputRange.value}%`;
-
-    document.querySelector('#range-span').textContent = `${inputRange.value}%`
-});
+inputRange.addEventListener('input', changeValue);
